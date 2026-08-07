@@ -1,7 +1,7 @@
 pkgbase = ffmpeg
 	pkgdesc = Complete solution to record, convert and stream audio and video
 	pkgver = 9.0
-	pkgrel = 4
+	pkgrel = 5
 	epoch = 2
 	url = https://ffmpeg.org
 	arch = x86_64
@@ -16,6 +16,7 @@ pkgbase = ffmpeg
 	makedepends = mesa
 	makedepends = nasm
 	makedepends = opencl-headers
+	makedepends = spirv-headers
 	makedepends = vulkan-headers
 	depends = alsa-lib
 	depends = aom
