@@ -9,7 +9,7 @@ pkgname=ffmpeg-sofa
 pkgver=9.0.2
 pkgrel=3
 epoch=2
-pkgdesc='Complete solution to record, convert and stream audio and video'
+pkgdesc='Complete solution to record, convert and stream audio and video (with libmysofa for SOFA/HRTF spatial audio)'
 arch=(x86_64)
 url=https://ffmpeg.org
 license=(GPL-3.0-only)
@@ -43,6 +43,7 @@ depends=(
   libiec61883
   libjxl
   libmodplug
+  libmysofa
   libopenmpt
   libplacebo
   libpulse
@@ -171,6 +172,7 @@ build() {
     --enable-libjxl \
     --enable-libmodplug \
     --enable-libmp3lame \
+    --enable-libmysofa \
     --enable-libopencore_amrnb \
     --enable-libopencore_amrwb \
     --enable-libopenjpeg \
