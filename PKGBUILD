@@ -4,7 +4,7 @@
 # Contributor: Tom Newsom <Jeepster@gmx.co.uk>
 # Contributor: Paul Mattal <paul@archlinux.org>
 
-pkgname=ffmpeg
+pkgname=ffmpeg-sofa
 pkgver=9.0.2
 pkgrel=3
 epoch=2
@@ -109,6 +109,7 @@ optdepends=(
   'onevpl-intel-gpu: Intel QuickSync support'
 )
 provides=(
+  ffmpeg=$epoch:$pkgver
   libavcodec.so
   libavdevice.so
   libavfilter.so
@@ -117,6 +118,7 @@ provides=(
   libswresample.so
   libswscale.so
 )
+conflicts=(ffmpeg)
 source=(
   git+https://git.ffmpeg.org/ffmpeg.git?signed#tag=n${pkgver}
   0001-Add-av_stream_get_first_dts-for-Chromium.patch
